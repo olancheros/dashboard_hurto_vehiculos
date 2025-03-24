@@ -9,6 +9,12 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+import os
+
+# checking that the current working directory is correct to ensure that the file paths are working
+if os.getcwd()[-3:] == "Src":
+    os.chdir('..')
+
 
 #######################
 # Page configuration
@@ -22,12 +28,12 @@ st.set_page_config(
 
 #######################
 # path
-path_autos = "../Data/Processed/hurto_autos_2003-2024.csv"
-path_motos = "../Data/Processed/hurto_motos_2003-2024.csv"
-path_autos_mensual = "../Data/Processed/hurto_autos_mensual_2003-2024.csv"
-path_motos_mensual = "../Data/Processed/hurto_motos_mensual_2003-2024.csv"
-path_mapa = "../Shapefiles/SHP_MGN2018_INTGRD_DEPTO/MGN_ANM_DPTOS.shp"
-css_path = "../assets/styles.css"
+path_autos = "Data/Processed/hurto_autos_2003-2024.csv"
+path_motos = "Data/Processed/hurto_motos_2003-2024.csv"
+path_autos_mensual = "Data/Processed/hurto_autos_mensual_2003-2024.csv"
+path_motos_mensual = "Data/Processed/hurto_motos_mensual_2003-2024.csv"
+path_mapa = "Shapefiles/SHP_MGN2018_INTGRD_DEPTO/MGN_ANM_DPTOS.shp"
+css_path = "assets/styles.css"
 
 
 #######################
