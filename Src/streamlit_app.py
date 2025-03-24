@@ -138,7 +138,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
 #######################
 # Choropleth map
 colombia = gpd.read_file(
-    path_mapa,
+    "Shapefiles/SHP_MGN2018_INTGRD_DEPTO/MGN_ANM_DPTOS.shp",
     encoding="utf8",
     dtype={"DPTO_CCDGO": str},
 ).loc[
